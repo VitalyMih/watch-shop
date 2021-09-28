@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>WatchCard Shop</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link rel="stylesheet" href="scss/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+</head>
+<body>
+
+<div class="wrapper">
+    <header class="header">
+        <div class="header__wrapper>">
+            <div class="header__top top-header">
+                <div class="top-header__wrapper">
+                    <div class="top-header__container _container">
+                        <div class="top-header__body">
+                            <div class="top-header__contacts contacts-header">
+                                <a href="tel:+78121234567" class="contacts-header__phone _icon-phone">8 (812) 123-45-67</a>
+                                <span>Работаем 7 дней в неделю</span>
+                                <span>9:00 - 18:00</span>
+                            </div>
+                            <div class="top-header__registration">
+                                <button type="button" class="login _icon-login">Войти / Регистрация</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="header__main main-header">
+                <div class="main-header__wrapper">
+                    <div class="main-header__container _container">
+                        <div class="main-header__body">
+                            <a href="#main" class="main-header__logo">
+                                <img src="img/logo.svg" alt="logo">
+                            </a>
+                            <nav class="main-header__nav">
+                                <ul class="main-header__list">
+                                    <li class="main-header__link"><button type="button">Понравилось</button></li>
+                                    <li class="main-header__link"><button type="button">Личный кабинет</button></li>
+                                    <li class="main-header__link"><button type="button">Настройки</button></li>
+                                </ul>
+                            </nav>
+                            <a href="tel:+78121234567" class="main-header__phone _icon-phone"></a>
+                            <button type="button" class="icon-menu">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </button>
+                            <div class="main-header__icons icons-header">
+                                <div class="icons-header__item cart-header">
+                                    <button type="button" class="cart-header__icon _icon-cart">
+                                    <span class="_icon-cart__amount"></span>
+                                    </button>
+                                </div>
+                                <div class="icons-header__item search-form">
+                                    <button type="button" class="search-form__icon _icon-search"></button>
+                                    <form action="#" class="search-form__item">
+                                        <button type="submit" class="search-form__btn _icon-search"></button>
+                                        <input type="text" autocomplete="off" name="search-input" placeholder="Поиск" class="search-form__input">
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="page" id="main">
+        <div class="main-screen">
+            <div class="main-screen__wrapper">
+                <div class="main-screen__container _container">
+                    <div class="main-screen__body">
+                        <div class="main-screen__background">
+                            <div class="main-screen__image _ibg">
+                                <img src="img/background/main_bg.jpg" alt="main-background">
+                            </div>
+                        </div>
+                        <div class="main-screen__content">
+                            <div class="main-screen__logo logo-main">
+                                <div class="logo-main__block">
+                                    <img class="logo-main__image" src="img/main_logo.svg" alt="main-logo">
+                                </div>
+                            </div>
+                            <div class="main-screen__about">
+                                <div class="main-screen__about_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus interdum purus, est tortor pulvinar ut in. Fringilla a diam enim sed justo, sed iaculis sagittis. Tortor id eu interdum nec ut iaculis. Penatibus ullamcorper ultricies morbi ipsum sem metus pharetra, mi. Tortor nibh magna feugiat id nunc, dui nisl viverra.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="new-collection">
+            <div class="new-collection__wrapper">
+                <div class="new-collection__body body-collection">
+                    <div class="body-collection__title">Сезон 2020/21</div>
+<!--                    Слайдер-->
+                    <div class="body-collection__slider">
+                        <div class="body-collection__swiper swiper">
+                            <div class="body-collection__wrapper swiper-wrapper"></div>
+                            <div class="body-collection__pagination swiper-pagination"></div>
+                        </div>
+                    </div>
+<!--                    Конец слайдера-->
+                </div>
+                <div class="new-collection__image image-collection">
+                    <div class="image-collection__background _ibg">
+                        <img src="img/collection/collection_1.jpg" alt="new-collection-image">
+                    </div>
+                    <div class="image-collection__title">Новая коллекция</div>
+                    <a href="#new-collection" class="image-collection__button">Каталог</a>
+                </div>
+            </div>
+        </div>
+        <div class="old-collection">
+            <div class="old-collection__wrapper">
+                <div class="old-collection__body">
+                    <div class="old-collection__image">
+                        <div class="old-collection__background _ibg">
+                            <img src="img/collection/collection_2.jpg" alt="old-collection-image">
+                        </div>
+                    </div>
+                    <div class="old-collection__content content-collection">
+                        <div class="content-collection__background _ibg">
+                            <img src="img/collection/collection_2.jpg" alt="content-collection-image">
+                        </div>
+                        <div class="content-collection__body">
+                            <div class="content-collection__title">Коллекция 2018</div>
+                            <div class="content-collection__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Non rutrum ornare ut mattis habitant dui arcu. Sagittis amet nunc ut neque quis nibh arcu. Vivamus vestibulum nisi et venenatis sed scelerisque magna consectetur. Amet convallis quis gravida facilisis vulputate. Faucibus facilisi habitasse ipsum interdum dictum aliquet. Velit quis ullamcorper pulvinar nulla malesuada integer. Aenean praesent viverra nulla nullam natoque volutpat curabitur auctor. Viverra viverra ullamcorper scelerisque risus dignissim egestas. Id aliquam a aliquam egestas leo orci pharetra sed diam. </div>
+                            <a href="#new-collection" class="content-collection__button">Посмотреть коллекцию</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="products" id="new-collection">
+            <div class="products__wrapper">
+                <div class="products__body">
+                    <div class="products__title">Новые поступления</div>
+<!--                        Слайдер-->
+                    <div class="products__slider slider-products">
+                        <div class="slider-products__swiper swiper">
+                            <div class="slider-products__wrapper swiper-wrapper"></div>
+                            <div class="slider-products__pagination swiper-pagination"></div>
+                        </div>
+                    </div>
+<!--                        Конец слайдера-->
+                </div>
+            </div>
+        </div>
+
+        <div class="brands">
+            <div class="brands__wrapper">
+                <div class="brands__container _container">
+                    <div class="brands__body">
+                        <div class="brands__title">
+                            Наши бренды
+                        </div>
+                        <div class="brands__list list-brands">
+                            <div class="list-brands__item">
+                                <img class="list-brands__image" src="img/brands/brand_1.svg" alt="brand-1">
+                            </div>
+                            <div class="list-brands__item">
+                                <img class="list-brands__image" src="img/brands/brand_2.png" alt="brand-1">
+                            </div>
+                            <div class="list-brands__item">
+                                <img class="list-brands__image" src="img/brands/brand_3.png" alt="brand-1">
+                            </div>
+                            <div class="list-brands__item">
+                                <img class="list-brands__image" src="img/brands/brand_1.svg" alt="brand-1">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__wrapper">
+            <div class="footer__container _container">
+                <div class="footer__body">
+                    <div class="footer__main main-footer">
+                        <div class="main-footer__about">
+                            <div class="main-footer__about_title footer-title">О магазине</div>
+                            <div class="main-footer__about_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mi semper viverra nunc cursus tortor lectus nunc nulla nibh. Egestas amet consectetur vel vitae aliquam dictum suspendisse. Lobortis eget consequat, tellus et et sed turpis. Pretium quisque vitae, amet, porttitor odio ultricies massa pharetra leo. Et ipsum urna fames in sit mi ultrices nisi, nunc.</div>
+                        </div>
+                        <div class="main-footer__categories">
+                            <div class="main-footer__categories_title footer-title">Категории</div>
+                            <div class="main-footer__categories_block">
+                                <span class="main-footer__categories_item"><button type="button">часы</button></span>
+                                <span class="main-footer__categories_item"><button type="button">браслеты</button></span>
+                                <span class="main-footer__categories_item"><button type="button">ремни</button></span>
+                                <span class="main-footer__categories_item"><button type="button">ювелирные изделия</button></span>
+                                <span class="main-footer__categories_item"><button type="button">запонки</button></span>
+                            </div>
+                        </div>
+                        <div class="main-footer__subscribe">
+                            <div class="main-footer__subscribe_title footer-title">Рассылка</div>
+                            <div class="main-footer__subscribe_block">
+                                <div class="main-footer__subscribe_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mi semper viverra nunc cursus tortor lectus nunc nulla nibh.</div>
+                                <div class="main-footer__form subscribe-form">
+                                    <form action="#" class="subscribe-form__form">
+                                        <input autocomplete="off" type="text" name="subscribe-form" placeholder="Ваша почта" class="subscribe-form__input _req _email">
+                                        <button class="subscribe-form__button" type="submit">Подписаться</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer__background">
+                        <div class="footer__image _ibg">
+                            <img src="img/background/footer_bg.jpg" alt="footer-background">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="copyright">
+        <div class="copyright__text">© 2020 Все права защищены</div>
+    </div>
+
+    <div class="cart">
+        <div class="cart__wrapper">
+            <div class="cart__container _container">
+                <div class="cart__body">
+                    <div class="cart__title">Ваш заказ</div>
+                    <button type="button" class="cart__close">
+                        <img src="img/icons/cross-icon.svg" alt="close">
+                    </button>
+                    <ul class="cart__list">
+                        <!--Часы-->
+                    </ul>
+                    <div class="cart__empty">Ваша корзина пуста...</div>
+                    <div class="cart__total total">
+                        <div class="total__title">Итого:</div>
+                        <div class="total__price">0 руб.</div>
+                    </div>
+                    <div class="cart__order order">
+                        <div class="order__title">Доставка</div>
+                        <div class="order__body">
+                            <form action="#" class="order__form">
+                                <div class="order__contacts">
+                                    <div class="order__person">
+                                        <input type="text" placeholder="Ваше имя" class="order__name _req">
+                                        <input type="text" placeholder="Ваш e-mail" class="order__mail _req _email">
+                                        <input type="text" placeholder="Ваш телефон" class="order__phone _req _phone">
+                                    </div>
+                                    <input class="order__address _req" placeholder="Ваш адресс">
+                                </div>
+                                <div class="order__button">
+                                    <button type="submit" class="order__btn">Заказать</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="javascript/script.js" type="module"></script>
+</body>
+</html>

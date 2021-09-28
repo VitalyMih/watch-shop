@@ -1,0 +1,511 @@
+//Импорт переменных
+@import "variables.scss";
+
+//Импорт адаптивного свойства
+@import "adaptiv_value.scss";
+
+//Класс .main-screen
+.main-screen {
+  @include adaptiv-value("margin-top", 124, 72, 1);
+  @media (max-width: $phoneWidth + px) {
+    @include adaptiv-value("margin-top", 80, 52, 1);
+  }
+  &__wrapper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+  &__background {
+    position: absolute;
+    flex: 1 0 100%;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+  &__image {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    @include adaptiv-value("padding-top", 160, 40, 1);
+    @include adaptiv-value("padding-bottom", 160, 40, 1);
+  }
+  &__about {
+    color: #FFFFFF;
+    @include adaptiv-value("font-size", 16, 12, 1);
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 24px;
+    -webkit-text-stroke: 0.7px #000000;
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    @include adaptiv-value("padding-top", 80, 40, 1);
+    @include adaptiv-value("padding-left", 190, -50, 1);
+    @include adaptiv-value("padding-right", 190, -50, 1);
+  }
+}
+/*--------------------------------------------------------*/
+
+.logo-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  @include adaptiv-value("min-width", 320, 260, 1);
+  @include adaptiv-value("min-height", 320, 260, 1);
+  border: 4px solid #FFFFFF;
+}
+/*--------------------------------------------------------*/
+
+//Класс .brands
+.brands {
+  background-color: $blackColor;
+  @include adaptiv-value("padding-top", 60, -10, 1);
+  @include adaptiv-value("padding-bottom", 75, -10, 1);
+  @media (max-width: $phoneWidth + px) {
+    padding: 10px 0;
+  }
+  &__wrapper {
+    width: 100%;
+    height: 100%;
+  }
+  &__body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__title {
+    font-family: 'PlayfairDisplay';
+    color: #FFFFFF;
+    @include adaptiv-value("font-size", 36, 20, 1);
+    font-weight: 700;
+    line-height: 48px;
+    text-transform: uppercase;
+    position: relative;
+    &:after {
+      position: absolute;
+      content: "";
+      height: 2px;
+      background-color: #FFFFFF;
+      width: 40%;
+      left: 30%;
+      @include adaptiv-value("top", 88, 44, 1);
+    }
+    @media (max-width: $phoneWidth + px) {
+      position: relative;
+      padding-left: 25px;
+      cursor: pointer;
+      z-index: 1;
+      padding-bottom: 0;
+      &:before,
+      &:after {
+        content: "";
+        width: 10px;
+        height: 1px;
+        background-color: #FFFFFF;
+        position: absolute;
+        top: 24px;
+        transition: all 0.3s ease 0s;
+      }
+      &:before {
+        transform: rotate(40deg);
+        left: 0;
+      }
+      &:after {
+        transform: rotate(-40deg);
+        left: 8px;
+      }
+      &._open {
+        &:before {
+          transform: rotate(-40deg);
+        }
+        &:after {
+          transform: rotate(40deg);
+        }
+      }
+    }
+  }
+}
+/*--------------------------------------------------------*/
+
+.list-brands {
+  display: flex;
+  flex-wrap: wrap;
+  @include adaptiv-value("margin-top", 80, 0, 1);
+ &__item {
+   flex: 0 0 25%;
+   display: flex;
+   align-items: center;
+   padding: 0 15px;
+   &:first-child {
+     padding-left: 0;
+   }
+   &:last-child {
+     padding-right: 0;
+   }
+ }
+  &__image {
+    width: 100%;
+  }
+  @media (max-width: $phoneWidth + px) {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    margin-top: 5px;
+    height: 0;
+    opacity: 0;
+    transition: all 0.3s ease 0s;
+    &__item {
+      flex: 0 0 auto;
+      padding: 10px 0;
+      @include adaptiv-value("max-width", 300, 200, 1);
+    }
+    &._open {
+      opacity: 1;
+    }
+  }
+}
+/*--------------------------------------------------------*/
+
+//Класс .old-collection
+.old-collection {
+  &__wrapper {
+    width: 100%;
+    height: 100%;
+  }
+  &__body {
+    display: flex;
+  }
+  &__image {
+    flex: 0 0 42%;
+    position: relative;
+    @media (max-width: $tabletWidth + px) {
+      display: none;
+    }
+  }
+  &__background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+  &__content {
+    flex: 0 0 58%;
+    @media (max-width: $tabletWidth + px) {
+      flex: 0 0 100%;
+    }
+  }
+}
+/*--------------------------------------------------------*/
+
+//Класс .content-collection
+.content-collection {
+  background-color: $mainColor;
+  &__body {
+    @include adaptiv-value("padding-top", 100, -70, 1);
+    @include adaptiv-value("padding-bottom", 100, -70, 1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__title {
+    font-family: 'PlayfairDisplay';
+    @include adaptiv-value("font-size", 36, 32, 1);
+    line-height: 48px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    position: relative;
+    &:after {
+      position: absolute;
+      content: "";
+      background-color: #FFFFFF;
+      height: 1px;
+      width: 40%;
+      left: 30%;
+      @include adaptiv-value("bottom", -40, 0, 1);
+    }
+  }
+  &__text {
+    @include adaptiv-value("font-size", 14, 10, 1);
+    @include adaptiv-value("margin-top", 80, 0, 1);
+    @include adaptiv-value("margin-bottom", 60, -20, 1);
+    line-height: 21px;
+    text-align: center;
+    color: #FFFFFF;
+    max-width: 511px;
+    padding: 0 20px;
+  }
+  &__button {
+    color: #FFFFFF;
+    padding: 12px 28px;
+    font-size: 18px;
+    line-height: 23px;
+    text-transform: uppercase;
+    border: 1px solid #FFFFFF;
+    transition: 0.3s ease 0s;
+    @media (any-hover: hover) {
+      &:hover {
+        opacity: 0.6;
+      }
+    }
+  }
+  @media (max-width: $tabletWidth + px) {
+    position: relative;
+    background-color: transparent;
+    ._ibg {
+      position: absolute;
+    }
+    &__background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+    &__body {
+      padding: 15px 0;
+    }
+    &__button {
+      margin-bottom: 5px;
+    }
+  }
+  @media (max-width: $phoneWidth + px) {
+    &__text {
+      margin: 15px 0;
+    }
+    &__title {
+      &:after {
+        bottom: -7px;
+      }
+    }
+  }
+}
+/*--------------------------------------------------------*/
+
+//Класс .new-collection
+.new-collection {
+  &__wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+  }
+  &__body {
+    flex: 0 0 54%;
+  }
+  &__image {
+    flex: 0 0 46%;
+  }
+  @media (max-width: $wideWidth + px) {
+    &__wrapper {
+      flex-direction: column;
+    }
+  }
+}
+/*--------------------------------------------------------*/
+
+//Класс .image-collection
+.image-collection {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  ._ibg {
+    position: absolute;
+  }
+  &__background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: -1;
+  }
+  &__title {
+    font-family: 'PlayfairDisplay';
+    @include adaptiv-value("font-size", 36, 28, 1);
+    @include adaptiv-value("margin-bottom", 60, 30, 1);
+    line-height: 48px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    position: relative;
+    text-align: center;
+    &:after {
+      position: absolute;
+      content: "";
+      height: 1px;
+      width: 32%;
+      @include adaptiv-value("bottom", -30, -10, 1);
+      left: 34%;
+      background-color: #FFFFFF;
+    }
+  }
+  &__button {
+    color: #FFFFFF;
+    padding: 12px 28px;
+    font-size: 18px;
+    line-height: 23px;
+    text-transform: uppercase;
+    border: 1px solid #FFFFFF;
+    transition: 0.3s ease 0s;
+    @media (any-hover: hover) {
+      &:hover {
+        opacity: 0.6;
+      }
+    }
+    @include adaptiv-value("margin-bottom", 100, 0, 1);
+  }
+  @media (max-width: $wideWidth + px) {
+    justify-content: center;
+    @include adaptiv-value("min-height", 600, 0, 1);
+    &__button {
+      margin-bottom: 0;
+    }
+  }
+  @media (max-width: $phoneWidth + px) {
+    @include adaptiv-value("min-height", 600, 200, 1);
+  }
+}
+/*--------------------------------------------------------*/
+
+//Класс .body-collection
+.body-collection {
+  background-color: $mainColor;
+  @include adaptiv-value("padding-top", 50, 25, 1);
+  @include adaptiv-value("padding-bottom", 20, 10, 1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  &__title {
+    font-family: 'PlayfairDisplay';
+    @include adaptiv-value("font-size", 36, 32, 1);
+    @include adaptiv-value("margin-bottom", 100, 50, 1);
+    line-height: 48px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    position: relative;
+    text-align: center;
+    &:after {
+      position: absolute;
+      content: "";
+      height: 1px;
+      width: 46%;
+      @include adaptiv-value("bottom", -50, -10, 1);
+      left: 27%;
+      background-color: #FFFFFF;
+    }
+  }
+  &__slider {
+    padding: 0 20px;
+    min-width: 0;
+    @include adaptiv-value("width", 960, 320, 2);
+    @include adaptiv-value("height", 460, 230, 2);
+    @include adaptiv-value("width", 960, 320, 1);
+    @include adaptiv-value("height", 460, 153, 1);
+  }
+  @media (max-width: $wideWidth + px) {
+    &__slider {
+      width: 1150px;
+      height: 410px;
+    }
+  }
+  @media (max-width: $maxWidthContainer + px) {
+    &__slider {
+      @include adaptiv-value("width", 960, 320, 1);
+      @include adaptiv-value("height", 460, 153, 1);
+    }
+  }
+  @media (max-width: $phoneWidth + px) {
+    &__slider {
+      width: 424px;
+      height: 320px;
+    }
+    padding: 15px 0;
+  }
+  @media (max-width: $narrowWidth + px) {
+    &__slider {
+      width: 230px;
+    }
+  }
+}
+/*--------------------------------------------------------*/
+
+//Класс .products
+.products {
+  @include adaptiv-value("padding-top", 120, 20, 1);
+  @include adaptiv-value("padding-bottom", 90, 15, 1);
+  background-color: $mainColor;
+  &__body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__title {
+    font-family: 'PlayfairDisplay';
+    @include adaptiv-value("font-size", 36, 32, 1);
+    @include adaptiv-value("margin-bottom", 120, 60, 1);
+    line-height: 48px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    position: relative;
+    text-align: center;
+    &:after {
+      position: absolute;
+      content: "";
+      height: 1px;
+      width: 27%;
+      @include adaptiv-value("bottom", -40, -10, 1);
+      left: 36%;
+      background-color: #FFFFFF;
+    }
+  }
+  &__slider {
+    min-width: 0;
+  }
+  @media (max-width: $wideWidth + px) {
+    padding-top: 50px;
+    padding-bottom: 20px;
+  }
+  @media (max-width: $maxWidthContainer + px) {
+    @include adaptiv-value("padding-top", 50, 20, 1);
+    @include adaptiv-value("padding-bottom", 20, 15, 1);
+  }
+  @media (max-width: $phoneWidth + px) {
+    padding: 15px 0;
+  }
+}
+/*--------------------------------------------------------*/
+
+//Класс .slider-products
+.slider-products {
+  padding: 0 15px;
+  @include adaptiv-value("width", 1140, 570, 2);
+  @include adaptiv-value("height", 885, 442, 2);
+  @include adaptiv-value("width", 1140, 320, 1);
+  @include adaptiv-value("height", 885, 140, 1);
+  @media (max-width: $wideWidth + px) {
+    width: 1030px;
+    height: 780px;
+  }
+  @media (max-width: $maxWidthContainer + px) {
+    @include adaptiv-value("width", 960, 320, 1);
+    @include adaptiv-value("height", 885, 275, 1);
+  }
+  @media (max-width: $phoneWidth + px) {
+      width: 424px;
+      height: 610px;
+  }
+  @media (max-width: $narrowWidth + px) {
+      width: 230px;
+  }
+}
+/*--------------------------------------------------------*/

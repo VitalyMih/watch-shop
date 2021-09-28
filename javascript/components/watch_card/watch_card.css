@@ -1,0 +1,188 @@
+.card {
+  width: 260px;
+  height: 405px;
+  background-color: #000000;
+}
+@media (min-width: 1140px) {
+  .card {
+    width: calc(130px + 130 * ((100vw - 320px) / 1600));
+  }
+}
+@media (min-width: 1140px) {
+  .card {
+    height: calc(202px + 203 * ((100vw - 320px) / 1600));
+  }
+}
+.card__body {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.card__image {
+  flex: 0 0 80%;
+  background-color: #191B1C;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card__image img {
+  width: 100%;
+}
+.card__bottom {
+  flex: 0 0 20%;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+.card__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.card__name {
+  font-family: "PlayfairDisplay";
+  color: #FFFFFF;
+  font-size: 18px;
+  line-height: 24px;
+}
+@media (max-width: 1140px) {
+  .card__name {
+    font-size: calc(14px + 4 * ((100vw - 320px) / 820));
+  }
+}
+.card__price {
+  padding-top: 10px;
+  font-family: "PlayfairDisplay";
+  font-size: 16px;
+  line-height: 21px;
+  color: #FFFFFF;
+}
+@media (max-width: 1140px) {
+  .card__price {
+    font-size: calc(12px + 4 * ((100vw - 320px) / 820));
+  }
+}
+.card__button {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  border: 1px solid #FFFFFF;
+  font-size: 14px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  padding-left: 7px;
+  padding-right: 7px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  padding-left: 7px;
+  padding-right: 7px;
+  line-height: 21px;
+  line-height: 21px;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  transition: all 0.3s ease 0s;
+}
+@media (max-width: 1140px) {
+  .card__button {
+    font-size: calc(10px + 4 * ((100vw - 320px) / 820));
+  }
+}
+@media (max-width: 1140px) {
+  .card__button {
+    padding-top: calc(2px + 5 * ((100vw - 320px) / 820));
+  }
+}
+@media (max-width: 1140px) {
+  .card__button {
+    padding-bottom: calc(2px + 5 * ((100vw - 320px) / 820));
+  }
+}
+@media (max-width: 1140px) {
+  .card__button {
+    padding-left: calc(2px + 5 * ((100vw - 320px) / 820));
+  }
+}
+@media (max-width: 1140px) {
+  .card__button {
+    padding-right: calc(2px + 5 * ((100vw - 320px) / 820));
+  }
+}
+@media (min-width: 1140px) {
+  .card__button {
+    padding-top: calc(2px + 5 * ((100vw - 320px) / 1600));
+  }
+}
+@media (min-width: 1140px) {
+  .card__button {
+    padding-bottom: calc(2px + 5 * ((100vw - 320px) / 1600));
+  }
+}
+@media (min-width: 1140px) {
+  .card__button {
+    padding-left: calc(2px + 5 * ((100vw - 320px) / 1600));
+  }
+}
+@media (min-width: 1140px) {
+  .card__button {
+    padding-right: calc(2px + 5 * ((100vw - 320px) / 1600));
+  }
+}
+@media (min-width: 1140px) {
+  .card__button {
+    line-height: calc(10px + 11 * ((100vw - 320px) / 1600));
+  }
+}
+@media (max-width: 1140px) {
+  .card__button {
+    line-height: calc(10px + 11 * ((100vw - 320px) / 820));
+  }
+}
+@media (any-hover: hover) {
+  .card__button:hover {
+    opacity: 0.6;
+  }
+}
+.card__button.in-cart {
+  color: #000000;
+  background-color: #FFFFFF;
+  cursor: default;
+}
+@media (any-hover: hover) {
+  .card__button.in-cart:hover {
+    opacity: 1;
+  }
+}
+@media (max-width: 1537px) {
+  .card {
+    width: 230px;
+    height: 350px;
+  }
+}
+@media (max-width: 1140px) {
+  .card {
+    width: 260px;
+    height: 405px;
+  }
+}
+@media (max-width: 1140px) and (max-width: 1140px) {
+  .card {
+    width: calc(65px + 195 * ((100vw - 320px) / 820));
+  }
+}
+@media (max-width: 1140px) and (max-width: 1140px) {
+  .card {
+    height: calc(101px + 304 * ((100vw - 320px) / 820));
+  }
+}
+@media (max-width: 767px) {
+  .card {
+    width: 172px;
+    height: 269px;
+  }
+  .card__button {
+    padding: 5px;
+  }
+}
+
+/*# sourceMappingURL=watch_card.css.map */

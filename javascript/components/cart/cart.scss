@@ -1,0 +1,368 @@
+//Импорт переменных
+@import "../../../scss/variables";
+
+//Импорт адаптивного свойства
+@import "../../../scss/adaptiv_value";
+
+//Основная сетка
+.cart {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.7);
+  &__wrapper {
+    height: 100%;
+    width: 100%;
+  }
+  &__body {
+    position: relative;
+    background-color: #808080;
+    margin-top: 15px;
+  }
+  &__title {
+    font-family: 'PlayfairDisplay';
+    @include adaptiv-value("font-size", 36, 32, 1);
+    line-height: 48px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    text-align: center;
+    position: relative;
+    //padding: 10px 0;
+    border: 2px solid #FFFFFF;
+    @include adaptiv-value("margin-bottom", 15, 7.5, 1);
+    @include adaptiv-value("padding-top", 10, 0, 1);
+    @include adaptiv-value("padding-bottom", 10, 0, 1);
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+  }
+  &__item {
+    @include adaptiv-value("height", 100, 100, 1);
+    @include adaptiv-value("margin-right", 15, 7.5, 1);
+    @include adaptiv-value("margin-bottom", 15, 7.5, 1);
+    @include adaptiv-value("margin-left", 15, 7.5, 1);
+    background-color: $mainColor;
+    padding: 10px 10px;
+    border-radius: 7px;
+    box-shadow: 4px 4px 2px 0 rgba(34, 60, 80, 0.2);
+  }
+  &__close {
+    position: absolute;
+    @include adaptiv-value("top", 22, 12, 1);
+    right: 15px;
+    transition: all 0.3s ease 0s;
+    @media (any-hover: hover) {
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+  &__total {
+    @include adaptiv-value("margin-bottom", 15, 7.5, 1);
+    padding-left: 20px;
+    padding-right: 20px;
+    font-family: 'PlayfairDisplay';
+    color: #FFFFFF;
+    @include adaptiv-value("font-size", 18, 14, 1);
+    line-height: 24px;
+    border: 2px solid #FFFFFF;
+    @include adaptiv-value("padding-top", 10, 5, 1);
+    @include adaptiv-value("padding-bottom", 10, 5, 1);
+  }
+  &__empty {
+    text-align: center;
+    font-family: 'PlayfairDisplay';
+    @include adaptiv-value("font-size", 18, 14, 1);
+    line-height: 24px;
+    color: #FFFFFF;
+    padding: 50px 0;
+  }
+  &.is-open {
+    display: block;
+  }
+}
+/*--------------------------------------------------------*/
+
+.item {
+  &__body {
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+  &__image {
+    height: 100%;
+    img {
+      height: 100%;
+    }
+  }
+  &__content {
+    flex: 1 0 auto;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__name {
+    font-family: 'PlayfairDisplay';
+    color: #FFFFFF;
+    @include adaptiv-value("font-size", 18, 14, 1);
+    line-height: 24px;
+    padding-left: 10px;
+  }
+  &__amount {
+    flex: 1 0 auto;
+    justify-content: flex-end;
+    display: flex;
+    font-family: 'PlayfairDisplay';
+    color: #FFFFFF;
+    @include adaptiv-value("font-size", 18, 14, 1);
+    line-height: 24px;
+    &_block {
+      display: flex;
+    }
+    &_plus,
+    &_minus {
+      transition: all 0.3s ease 0s;
+      @media (any-hover: hover) {
+        &:hover {
+          opacity: 0.7;
+        }
+      }
+    }
+  }
+  &__price {
+    flex: 0 0 20%;
+    text-align: center;
+    font-family: 'PlayfairDisplay';
+    color: #FFFFFF;
+    @include adaptiv-value("font-size", 18, 14, 1);
+    line-height: 24px;
+  }
+  &__count {
+    padding: 0 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  @media (max-width: $phoneWidth + px) {
+    &__content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      height: 100%;
+    }
+    &__amount {
+      padding-left: 10px;
+      grid-column-start: 1;
+      justify-content: flex-start;
+    }
+    &__price {
+      grid-row-start: 1;
+      grid-column-start: 2;
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-end;
+    }
+    &__name {
+      display: flex;
+      align-items: center;
+    }
+  }
+  @media (max-width: $narrowWidth + px) {
+    &__content {
+      display: flex;
+      flex-direction: column;
+    }
+    &__name {
+      justify-content: center;
+    }
+    &__amount {
+      justify-content: center;
+    }
+    &__price {
+      padding-left: 10px;
+      justify-content: center;
+    }
+  }
+}
+/*--------------------------------------------------------*/
+
+.total {
+  display: flex;
+  justify-content: space-between;
+  &__title {
+    //margin-left: 20px;
+  }
+  &__price {
+    text-align: center;
+  }
+}
+/*--------------------------------------------------------*/
+
+.order {
+  &__title {
+    text-align: center;
+    font-family: 'PlayfairDisplay';
+    @include adaptiv-value("font-size", 36, 32, 1);
+    line-height: 48px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+  }
+  &__body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 670px;
+  }
+  &__person {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__name {
+    background-color: #FFFFFF;
+    flex: 0 0 30%;
+    padding: 10px 10px;
+    border-radius: 7px;
+    box-shadow: 4px 4px 2px 0 rgba(34, 60, 80, 0.2);
+    @include adaptiv-value("font-size", 14, 10, 1);
+    line-height: 20px;
+    font-family: 'PlayfairDisplay';
+    &::placeholder {
+      color: $mainColor;
+      transition: all 0.3s ease 0s;
+    }
+    &:focus {
+      &::placeholder {
+        opacity: 0.5;
+        color: transparent;
+      }
+    }
+    &._error {
+      box-shadow: 0 0 5px 2px red inset;
+    }
+  }
+  &__mail {
+    background-color: #FFFFFF;
+    flex: 0 0 30%;
+    padding: 10px 10px;
+    border-radius: 7px;
+    box-shadow: 4px 4px 2px 0 rgba(34, 60, 80, 0.2);
+    @include adaptiv-value("font-size", 14, 10, 1);
+    line-height: 20px;
+    font-family: 'PlayfairDisplay';
+    &::placeholder {
+      color: $mainColor;
+      transition: all 0.3s ease 0s;
+    }
+    &:focus {
+      &::placeholder {
+        opacity: 0.5;
+        color: transparent;
+      }
+    }
+    &._error {
+      box-shadow: 0 0 5px 2px red inset;
+    }
+  }
+  &__phone {
+    background-color: #FFFFFF;
+    flex: 0 0 30%;
+    padding: 10px 10px;
+    border-radius: 7px;
+    box-shadow: 4px 4px 2px 0 rgba(34, 60, 80, 0.2);
+    @include adaptiv-value("font-size", 14, 10, 1);
+    line-height: 20px;
+    font-family: 'PlayfairDisplay';
+    &::placeholder {
+      color: $mainColor;
+      transition: all 0.3s ease 0s;
+    }
+    &:focus {
+      &::placeholder {
+        opacity: 0.5;
+        color: transparent;
+      }
+    }
+    &._error {
+      box-shadow: 0 0 5px 2px red inset;
+    }
+  }
+  &__address {
+    background-color: #FFFFFF;
+    width: 100%;
+    padding: 10px 10px;
+    border-radius: 7px;
+    margin-top: 15px;
+    box-shadow: 4px 4px 2px 0 rgba(34, 60, 80, 0.2);
+    @include adaptiv-value("font-size", 14, 10, 1);
+    line-height: 20px;
+    font-family: 'PlayfairDisplay';
+    &::placeholder {
+      color: $mainColor;
+      transition: all 0.3s ease 0s;
+    }
+    &:focus {
+      &::placeholder {
+        opacity: 0.5;
+        color: transparent;
+      }
+    }
+    &._error {
+      box-shadow: 0 0 5px 2px red inset;
+    }
+  }
+  &__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+  }
+  &__btn {
+    background-color: $mainColor;
+    color: #FFFFFF;
+    border-radius: 7px;
+    box-shadow: 4px 4px 2px 0 rgba(34, 60, 80, 0.2);
+    transition: all 0.3s ease 0s;
+    @include adaptiv-value("font-size", 18, 14, 1);
+    line-height: 24px;
+    font-family: 'PlayfairDisplay';
+    text-transform: uppercase;
+    @include adaptiv-value("padding-top", 20, 10, 1);
+    @include adaptiv-value("padding-bottom", 20, 10, 1);
+    @include adaptiv-value("padding-left", 50, 25, 1);
+    @include adaptiv-value("padding-right", 50, 25, 1);
+    @media (any-hover: hover) {
+     &:hover {
+       opacity: 0.7;
+     }
+    }
+  }
+  @media (max-width: $phoneWidth + px) {
+    &__form {
+      width: 100%;
+    }
+    &__person {
+      flex-direction: column;
+    }
+    &__name {
+      margin-bottom: 15px;
+    }
+    &__mail {
+      margin-bottom: 15px;
+    }
+    &__contacts {
+      width: 100%;
+      padding: 0 20px;
+    }
+  }
+}
+

@@ -1,0 +1,20 @@
+.swiper {
+  height: 100%;
+}
+
+.swiper-pagination {
+  bottom: 0;
+}
+
+.swiper-pagination-bullet {
+  background: var(--swiper-pagination-bullet-inactive-color, #fff) !important;
+  margin: 0 7px !important;
+  width: var(--swiper-pagination-bullet-width, var(--swiper-pagination-bullet-size, 15px)) !important;
+  height: var(--swiper-pagination-bullet-height, var(--swiper-pagination-bullet-size, 15px)) !important;
+}
+
+.swiper-slide {
+  height: auto !important;
+}
+
+/*# sourceMappingURL=slider.css.map */
